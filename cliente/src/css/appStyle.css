@@ -1,0 +1,32 @@
+body {
+  font-family: 'Open Sans', sans-serif; }
+  body a {
+    color: black;
+    text-decoration: none; }
+  body .mensaje {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 32px; }
+    body .mensaje h1 {
+      font-size: 28px; }
+
+/*Spinner*/
+.spinner {
+  width: 25px;
+  height: 25px;
+  border: 2px solid  #00695c;
+  border-top: 3px solid #ffc1e3;
+  border-radius: 100%;
+  animation: spin 1s infinite linear;
+  margin: 28px auto; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }

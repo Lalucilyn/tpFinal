@@ -1,0 +1,123 @@
+/*Variables*/
+$margenGrande: 32px;
+$margenPeque: 16px;
+
+
+#cajaContenido {
+  margin-left:8.34%;
+  width: 83.06%;
+  background: white; 
+  
+  ul {
+    display:flex;
+    margin: $margenPeque 0;
+
+    li {
+      list-style:none;
+      margin-right:11px;
+      text-transform:uppercase;
+      font-size:14px;
+      color:#003d33;
+    }
+  }
+  
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    border:1px solid lightgray;
+    padding: 18px 5px;
+    box-shadow: 4px 4px 4px #bdbdbd;
+    margin:$margenPeque 0;
+    &:hover{
+      box-shadow: 4px 4px 4px #8d8d8d;
+      transform:scale(1.01);
+      transition:0.3s;
+    }
+
+    h3 {
+      font-size:18px;
+    }
+
+    h4 {
+      font-size:12px;
+      color:#bf5f82;
+    }
+
+    figure {
+      margin-left:$margenPeque;
+      max-width:20%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      img {
+        width: 180px;
+        height: 180px;
+        border-radius:4px;
+      }
+    }
+
+    .flexItems{
+      display:flex;
+      margin-left:$margenPeque;
+      width:74%;
+      justify-content:space-between;
+      
+      .nombrePrecio {
+        width:55%;
+        
+        .precio {
+          font-size:24px;
+          position:relative;
+          display:flex;
+          align-items:center;
+          margin-bottom:$margenGrande;
+        }
+        
+        i {
+          font-size:12px;
+          padding:6px 5px;
+          border-radius:70%;
+          background:#439889;
+          color:white;
+          margin-left:5px;
+        }
+        
+        .decimales {
+          align-self:flex-start;
+          font-size:12px;
+        }
+      }
+    }
+  }
+}
+
+
+@media all and (max-width:980px){
+  #cajaContenido {
+    ul {
+      display:none;
+    }
+
+    article {
+      display:block;
+      figure {
+        display:none;
+      }
+
+      .flexItems {
+      flex-direction:column;
+        .nombrePrecio {
+          width:80%;
+ 
+             .precio{
+              margin-bottom:10px;
+            }
+          }
+ 
+        h4 {
+          width:80%;
+        }
+      }
+    }
+  }
+}
